@@ -1,1 +1,28 @@
+public class Drago implements Runnable {
+    private String nome;
+    private int numBattiti;
 
+    public Drago(int numBattiti) {
+        this.numBattiti = numBattiti;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < numBattiti; i++) {
+            System.out.println(this.getNome() + " sta volando, " + (i + 1) + "battiti");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e){
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public void setNome(String s) {
+        this.nome = s;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
