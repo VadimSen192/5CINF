@@ -7,7 +7,7 @@ public class Cacciatore {
     }
 
     public void lanciaDardi(Thread d) {
-        for (int i = 0; i <= 50; i++) {
+        for (int i = 0; (i <= 20) && (!d.isInterrupted()); i++) {
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
