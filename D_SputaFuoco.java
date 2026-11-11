@@ -1,7 +1,7 @@
-public class SputaFuoco extends Drago implements Runnable {
+public class D_SputaFuoco extends Drago implements Runnable {
     private Principessa principessaDaCatturare;
 
-    public SputaFuoco(String nome, Principessa principessaDaCatturare) {
+    public D_SputaFuoco(String nome, Principessa principessaDaCatturare) {
         super(nome);
         this.principessaDaCatturare = principessaDaCatturare;
     }
